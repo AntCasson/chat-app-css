@@ -1,0 +1,131 @@
+:root {
+  --top-heading: hsl(276, 100%, 81%);
+  --clr-chat-left: hsl(276, 55%, 52%);
+  --clr-chat-right: hsl(271, 15%, 43%);
+  --placeholder-text: hsl(206, 6%, 79%);
+  --main-heading: hsl(271, 36%, 24%);
+  --clr-text-body: hsl(270, 7%, 64%);
+  --pink: hsl(293, 100%, 63%);
+  --purple: hsl(264, 100%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --clr-bg-app: hsl(270, 20%, 96%);
+  --btn-bg: hsl(271, 36%, 24%);
+  --btn-radio-outline: hsl(289, 100%, 72%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  max-width: 100%;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Rubik", sans-serif;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* utility class */
+
+.flex {
+  display: flex;
+}
+
+.gradient-light-dark {
+  background-image: linear-gradient(to right, var(--pink), var(--purple));
+}
+
+.gradient-dark-light {
+  background-image: linear-gradient(to right, var(--purple), var(--pink));
+}
+/* typography */
+
+.phone__nav--photo {
+  color: var(--top-heading);
+}
+
+/* mobile first css */
+
+.wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  background-color: var(--clr-bg-app);
+}
+
+.phone__wrapper {
+  padding: 0.5em;
+  max-width: 18.75rem;
+  border: solid red 2px;
+  border-radius: 2rem;
+}
