@@ -52,6 +52,7 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: "Rubik", sans-serif;
+  background-color: var(--clr-bg-app);
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -96,8 +97,16 @@ select {
 
 /* utility class */
 
+.grid {
+  display: grid;
+}
+
 .flex {
   display: flex;
+}
+
+.f-end {
+  justify-content: flex-end;
 }
 
 .gradient-light-dark {
@@ -107,13 +116,34 @@ select {
 .gradient-dark-light {
   background-image: linear-gradient(to right, var(--purple), var(--pink));
 }
+
 /* typography */
 
-.phone__nav--photo {
+.phone__nav--title {
+  color: var(--white);
+}
+.phone__nav--text {
   color: var(--top-heading);
 }
 
-/* mobile first css */
+.section__text {
+  text-align: center;
+  color: var(--main-heading);
+}
+
+.section__title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-block: 0.5em;
+}
+
+.section__main-text {
+  padding-inline: 2em;
+  color: var(--clr-text-body);
+}
+
+/* css */
 
 .wrapper {
   width: 100%;
@@ -123,9 +153,115 @@ select {
   background-color: var(--clr-bg-app);
 }
 
+/* css phone screen */
 .phone__wrapper {
   padding: 0.5em;
-  max-width: 18.75rem;
+  width: 14rem;
   border: solid red 2px;
   border-radius: 2rem;
+}
+
+.phone__nav {
+  display: flex;
+  padding: 1.8em 1.5em 1em;
+  font-size: 0.7rem;
+  border-radius: 2em 2em 0.3em 0.3em;
+  align-items: center;
+}
+
+.phone__nav--photo {
+  margin-inline: 0.5em;
+  aspect-ratio: 1;
+  width: 2rem;
+  border-radius: 50%;
+  border: solid var(--white) 2px;
+}
+
+.phone__chat-wrapper {
+  display: grid;
+  gap: 1.2em;
+  background-color: var(--clr-bg-app);
+  font-size: 0.5rem;
+  width: 100%;
+}
+
+.f-end {
+  justify-content: flex-end;
+}
+
+.chat-left,
+.chat-right {
+  /* margin: 0.825em 0; */
+  padding: 0.725em;
+  width: 24ch;
+  border-radius: 0.4rem;
+  box-shadow: 0px 2px 10px hsla(0, 0%, 31%, 0.1);
+}
+
+.chat-left {
+  background-color: hsl(277, 84%, 93%);
+  color: var(--clr-chat-left);
+}
+
+.chat-right {
+  text-align: right;
+  justify-self: end;
+  background-color: hsl(277, 100%, 97%);
+}
+
+.dog-img {
+  justify-items: flex-end;
+  margin-right: 0.8em;
+  aspect-ratio: 1;
+  width: 2.5rem;
+  border-radius: 0.5em;
+  box-shadow: 0px 2px 10px hsla(0, 0%, 31%, 0.1);
+}
+
+.chat__walk-option {
+  padding: 0.825em;
+  align-items: center;
+  background-color: pink;
+  color: var(--white);
+  width: 30ch;
+  border-radius: 1.3em 1.3em 1.3em 0.2em;
+}
+
+input[type="radio"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  appearance: none;
+  /* For iOS < 15 */
+  background-color: var(--form-background);
+  /* Not removed via appearance */
+  margin: 0 0.625em 0 0;
+
+  font: inherit;
+  color: currentColor;
+  width: 1.325em;
+  height: 1.325em;
+  border: 0.1em solid currentColor;
+  border-radius: 50%;
+  transform: translateX(-0.1em);
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+.label {
+  margin-right: auto;
+  font-size: 0.5rem;
+  color: hsl(277, 84%, 93%);
+}
+
+.price {
+  font-size: 0.825rem;
+  font-weight: 700;
+}
+
+.chat__message-input {
+  padding: 1.5em;
+  background-color: var(--white);
+  border-radius: 100vh;
 }
