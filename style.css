@@ -154,27 +154,31 @@ select {
 }
 
 /* css phone screen */
+
 .phone__wrapper {
+  margin-block: 2em;
   padding: 0.5em;
   width: 14rem;
-  border: solid red 2px;
   border-radius: 2rem;
+  box-shadow: 0px 0px 0px 8px white inset,
+    0px 0px 20px 10px hsl(0, 0%, 31%, 0.1);
 }
 
 .phone__nav {
+  position: relative;
   display: flex;
   padding: 1.8em 1.5em 1em;
-  font-size: 0.7rem;
-  border-radius: 2em 2em 0.3em 0.3em;
+  font-size: 0.625rem;
+  border-radius: 1.5rem 1.5rem 0.3em 0.3em;
   align-items: center;
 }
 
 .phone__nav--photo {
   margin-inline: 0.5em;
   aspect-ratio: 1;
-  width: 2rem;
+  width: 1.5rem;
   border-radius: 50%;
-  border: solid var(--white) 2px;
+  border: solid var(--white) 1px;
 }
 
 .phone__chat-wrapper {
@@ -183,6 +187,23 @@ select {
   background-color: var(--clr-bg-app);
   font-size: 0.5rem;
   width: 100%;
+  border-radius: 0 0 2rem 2rem;
+}
+
+.phone__nav::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 0 26%;
+  height: 10px;
+  width: 100px;
+  background-color: var(--white);
+  border-radius: 0 0 2rem 2rem;
+}
+
+.phone__nav--text {
+  padding: 0;
+  margin: -2px 0 0 0;
+  font-size: 0.5rem;
 }
 
 .f-end {
@@ -191,9 +212,10 @@ select {
 
 .chat-left,
 .chat-right {
-  /* margin: 0.825em 0; */
+  margin: 0 1em;
   padding: 0.725em;
-  width: 24ch;
+  width: auto;
+  max-width: 20ch;
   border-radius: 0.4rem;
   box-shadow: 0px 2px 10px hsla(0, 0%, 31%, 0.1);
 }
@@ -201,6 +223,10 @@ select {
 .chat-left {
   background-color: hsl(277, 84%, 93%);
   color: var(--clr-chat-left);
+}
+
+.chat-left:first-of-type {
+  margin-top: 1.2em;
 }
 
 .chat-right {
@@ -219,6 +245,7 @@ select {
 }
 
 .chat__walk-option {
+  margin-left: 1em;
   padding: 0.825em;
   align-items: center;
   background-color: pink;
@@ -236,7 +263,6 @@ input[type="radio"] {
   background-color: var(--form-background);
   /* Not removed via appearance */
   margin: 0 0.625em 0 0;
-
   font: inherit;
   color: currentColor;
   width: 1.325em;
@@ -261,6 +287,7 @@ input[type="radio"] {
 }
 
 .chat__message-input {
+  margin: 1em;
   padding: 1.5em;
   background-color: var(--white);
   border-radius: 100vh;
