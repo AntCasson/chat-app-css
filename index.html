@@ -24,16 +24,26 @@
     <main class="wrapper">
       <section class="phone__wrapper">
         <div class="phone__nav gradient-dark-light">
-          <span class="phone__nav--right-arrow"><</span>
+          <img
+            class="svg-nav"
+            src="/images/left-svgrepo-com.svg"
+            alt="fake go back "
+          />
           <img
             class="phone__nav--photo"
             src="./images/avatar.jpg"
             alt="side profile of Samuel Green"
           />
-          <div class="grid">
+          <div class="grid push-right">
             <p class="phone__nav--title">Samuel Green</p>
             <p class="phone__nav--text">Available to Walk</p>
           </div>
+
+          <img
+            class="svg-nav"
+            src="/images/dots-y-svgrepo-com.svg"
+            alt="fake menu button"
+          />
         </div>
 
         <div class="phone__chat-wrapper">
@@ -82,9 +92,15 @@
             <div class="price">$49</div>
           </div>
 
-          <div class="chat__message-input">
-            <p>Type a message…</p>
-            <div class="chat__send-btn"></div>
+          <div class="chat__message-input flex">
+            <p class="push-right">Type a message…</p>
+            <div class="chat__send-btn">
+              <img
+                class="svg-input"
+                src="/images/left-svgrepo-com.svg"
+                alt="fake menu button"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -99,12 +115,13 @@
         </p>
       </section>
 
-      <!-- <div class="attribution">
+      <div class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">AntCasson</a>.
-      </div> -->
+        >. <br />
+        Coded by <a href="#">AntCasson</a>.
+      </div>
     </main>
   </body>
 </html>
